@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
 
-:root{
-    --yellow:#f9ca24;
-}
+
 
 *{
     font-family: 'Nunito', sans-serif;
@@ -14,10 +12,7 @@
     transition: all .2s linear;
 }
 
-*::selection{
-    background:var(--yellow);
-    color:#333;
-}
+
 
 html{
     font-size: 62.5%;
@@ -33,7 +28,7 @@ html::-webkit-scrollbar-track{
 }
 
 html::-webkit-scrollbar-thumb{
-    background:var(--yellow);
+    background: green;
 }
 
 body{
@@ -63,7 +58,8 @@ section{
 }
 
 .btn:hover{
-    background:darkBlue;
+    background: lightGreen;
+    color: black;
 }
 
 .heading{
@@ -76,7 +72,7 @@ section{
 }
 
 .heading span{
-    color:var(--yellow);
+    color: Lime;
 }
 
 header{
@@ -99,18 +95,17 @@ header .user img{
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-    border:.7rem solid black ;
+    border:.7rem solid 	lightgreen;
 }
 
 header .user .name{
     font-size: 3.5rem;
-    color: blue;
+    color: white;
 }
 
 header .user .post{
     font-size: 2rem;
-    color:yellow;
-    font-weight: 900;
+    color:#eee;
 }
 
 header .navbar{
@@ -128,13 +123,14 @@ header .navbar ul li a{
     padding:1rem;
     margin:1.5rem 0;
     background:#333;
-    color: darkred;
+    color:#fff;
     font-size: 2rem;
     border-radius: 5rem;
 }
 
 header .navbar ul li a:hover{
-    background: blue;
+    background: lightGreen;
+    color: black;
 }
 
 #menu{
@@ -167,7 +163,7 @@ header .navbar ul li a:hover{
 }
 
 .home h1 span{
-    color:darkred;
+    color: Lime;
 }
 
 .home p{
@@ -192,13 +188,13 @@ header .navbar ul li a:hover{
 
 .about .row .info h3{
     font-size: 2rem;
-    color:var(--yellow);
+    color: Lime;
     padding:1rem 0;
     font-weight: normal;
 }
 
 .about .row .info h3 span{
-    color:darkred;
+    color:#eee;
     padding:0 .5rem;
 }
 
@@ -216,13 +212,10 @@ header .navbar ul li a:hover{
     padding: 2rem;
     margin:2rem;
 }
-.line
-{
-    color: #f9ca24;
-}
+
 .about .row .counter .box span{
     font-size: 4rem;
-    color:var(--yellow);
+    color:Lime;
 }
 
 .about .row .counter .box h3{
@@ -276,14 +269,36 @@ header .navbar ul li a:hover{
     line-height: 5rem;
     text-align: center;
     font-size: 2rem;
-    color:#fff;
-    background:var(--yellow);
+    color: black;
+    background: lightgreen;
 }
 
+.portfolio .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+}
 
+.portfolio .box-container .box{
+    height: 20rem;
+    width:26rem;
+    border-radius: 1rem;
+    margin:2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
 
+.portfolio .box-container .box img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
 
-
+.portfolio .box-container .box:hover img{
+    transform: scale(1.2);
+}
 
 .contact .row{
     display: flex;
@@ -342,7 +357,7 @@ header .navbar ul li a:hover{
 
 .contact .row .content .info h3 i{
     padding-right: 1rem;
-    color:var(--yellow);
+    color:Lime;
 }
 
 .top{
@@ -352,9 +367,99 @@ header .navbar ul li a:hover{
     display: none;
 }
 
+/*skills*/
+.about-stats  .progress-bars{
+    grid-template-columns: repeat(1, 1fr);
+}
 
 
 
+.about-stats {
+padding-bottom: 4rem;
+}
+.about-stats .progress-bars {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-gap: 2rem;
+}
+.about-stats .progress-bars .progress-bar {
+display: flex;
+flex-direction: column;
+}
+.about-stats .progress-bars .progress-bar .prog-title {
+text-transform: uppercase;
+font-weight: 500;
+font-size:2em;
+
+color:white;
+}
+.about-stats .progress-bars .progress-bar .progress-con {
+display: flex;
+align-items: center;
+
+}
+.about-stats .progress-bars .progress-bar .progress-con .prog-text {
+color: brown;
+font-size: 2em;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress {
+width: 100%;
+height: 0.45rem;
+background-color: brown;
+margin-left: 1rem;
+position: relative;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress span {
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+background-color: lightgreen;
+transition: all 0.4s ease-in-out;
+width: 60%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .c {
+    width: 80%;
+    }
+.about-stats .progress-bars .progress-bar .progress-con .progress .html1 {
+width: 75%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .css {
+width: 75%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .js {
+width: 60%;
+}
+
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .python {
+width: 60%;
+}
+
+.stat-title {
+text-transform: uppercase;
+font-size: 1.4rem;
+text-align: center;
+padding: 3.5rem 0;
+position: relative;
+color: white;
+font-size: 3em;
+
+}
+.stat-title::before {
+content: "";
+position: absolute;
+left: 50%;
+top: 0;
+width: 40%;
+height: 1px;
+
+transform: translateX(-50%);
+}
+
+
+
+/*skills*/
 
 
 
@@ -402,6 +507,7 @@ header .navbar ul li a:hover{
        padding:0;
    }
 
+
 }
 
 @media (max-width:768px){
@@ -430,110 +536,12 @@ header .navbar ul li a:hover{
         width:100%;
     }
 
-  
+    .portfolio .box-container .box{
+        width:100%;
+    }
 
     .contact .row form{
         margin:3rem 0;
     }
 
-
-
-
-
-
-
-
-    
  }
-
-  
- .about-stats  .progress-bars{
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-
-
- .about-stats {
-    padding-bottom: 4rem;
-  }
-  .about-stats .progress-bars {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
-  }
-  .about-stats .progress-bars .progress-bar {
-    display: flex;
-    flex-direction: column;
-  }
-  .about-stats .progress-bars .progress-bar .prog-title {
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size:2em;
-   
-    color:white;
-  }
-  .about-stats .progress-bars .progress-bar .progress-con {
-    display: flex;
-    align-items: center;
-    
-  }
-  .about-stats .progress-bars .progress-bar .progress-con .prog-text {
-    color: yellow;
-    font-size: 2em;
-  }
-  .about-stats .progress-bars .progress-bar .progress-con .progress {
-    width: 100%;
-    height: 0.45rem;
-    background-color: grey;
-    margin-left: 1rem;
-    position: relative;
-  }
-  .about-stats .progress-bars .progress-bar .progress-con .progress span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background-color: blue;
-    transition: all 0.4s ease-in-out;
-    width: 60%;
-  }
-  .about-stats .progress-bars .progress-bar .progress-con .progress .html1 {
-    width: 80%;
-  }
-  .about-stats .progress-bars .progress-bar .progress-con .progress .css {
-    width: 95%;
-  }
-  .about-stats .progress-bars .progress-bar .progress-con .progress .js {
-    width: 75%;
-  }
-  .about-stats .progress-bars .progress-bar .progress-con .progress .react {
-    width: 60%;
-  }
-  .about-stats .progress-bars .progress-bar .progress-con .progress .node {
-    width: 87%;
-  }
-  .about-stats .progress-bars .progress-bar .progress-con .progress .python {
-    width: 70%;
-  }
-  
-  .stat-title {
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    text-align: center;
-    padding: 3.5rem 0;
-    position: relative;
-    color: white;
-    font-size: 3em;
-
-  }
-  .stat-title::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 40%;
-    height: 1px;
-    background-color: var(--color-grey-5);
-    transform: translateX(-50%);
-  }
-  
